@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: stream-magnet
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
+    envVars:
+      - key: ONLY_AUTHORIZED
+        value: "false"
+      - key: EMBED_ONLY_AUTHORIZED
+        value: "false"
